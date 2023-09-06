@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero Project</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body class="css-selector">
+    <main id="wrapper">
+      <nav class="heading">
+        <div class="heading-container">
+          <img class="nav-img" src="./assets/Panther_logo-removebg.png" alt="">
+          <h1>SuperHero-Hunter ❤️</h1>
+          <button id="Favourites" ><a href="favourite.html" target="_blank">Favourites 😍</a></button>
+        </div>
+      </nav>      
+      <!-- search functionality -->
+      <div id="search">
+        <input
+        style="background-color: #303134; color: aliceblue; padding-left:10px;"
+          id="searchResult"
+          type="text"
+          placeholder="Search.."
+          aria-label="Search"
+          autocomplete="off"
+        />
+        <ul class="autocomplete-box"></ul>
+      </div>
+
+      <!-- image container -->
+      <div id="characterImageContainer" class="container"></div>
+
+      <!-- modal section -->
+      <button class="primary" onclick="window.dialog.showModal();">
+        <!-- Open Dialog -->
+      </button>
+      <dialog id="dialog" >
+        <button onclick="window.dialog.close();" aria-label="close" class="x">
+          ❌
+        </button>
+        <img id="modalImage" src="" alt="Modal Image">
+        <p id="modalName">Name:<span id="modalName-span"></span></p>
+        <p id="modalComics">Comics: <span id="modalComics-span"></span></p>
+        <p id="modalStories">Stories: <span id="modalStories-span"></span></p>
+        <p id="modalSeries">Series: <span id="modalSeries-span"></span></p>
+        <p id="modalDescription">Description: <span id="modalDescription-span"></span></p>
+        <button class="favHero">Favourites</button>
+        <button class="removeHero">removeHero</button>
+      </dialog>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fe0e08a940.js"
+      crossorigin="anonymous">
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

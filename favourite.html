@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourite SuperHero</title>
+    <link rel="stylesheet" href="Styles/favouriteHero.css" />
+    <!-- <link rel="stylesheet" href="js/script2.js" /> -->
+  </head>
+  <body>
+    <nav class="heading">
+      <div class="heading-container">
+        <img class="nav-img" src="./assets/Panther_logo-removebg.png" alt="">
+        <h1><a href="./index.html">Your Favourite Supper-Heroes ❤️</a></h1>
+      </div>
+    </nav>    
+    <main class="wrapper">
+      <div id="characterImageContainer" class="container"></div>
+      <button class="primary" onclick="window.dialog.showModal();">
+      </button>
+      <dialog id="dialog">
+        <button onclick="window.dialog.close();" aria-label="close" class="x">
+          ❌
+        </button>
+        <img id="modalImage" src="" alt="Modal Image">
+        <p id="modalName">Name:<span id="modalName-span"></span></p>
+        <p id="modalComics">Comics: <span id="modalComics-span"></span></p>
+        <p id="modalStories">Stories: <span id="modalStories-span"></span></p>
+        <p id="modalSeries">Series: <span id="modalSeries-span"></span></p>
+        <p id="modalDescription">Description: <span id="modalDescription-span"></span></p>
+        <button class="favHero">Favourites</button>
+        <button class="removeHero">removeHero</button>
+      </dialog>
+    </main>
+    <script src="js/favorites.js"></script>
+  </body>
+</html>

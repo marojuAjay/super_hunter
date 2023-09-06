@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color:#313233 ;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+}
+h1{
+    color: white;
+    box-shadow: 0px 0px 10px #7e4d08; /* Add box shadow to h1 element */
+    margin-bottom: 40px;
+    margin-right: 35%;
+}
+.heading {
+  width: 100%;
+  height: 100px;
+}
+.nav-img {
+  height: 100px;
+  margin-left: 50px;
+  margin-left: 8%;
+  
+}
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  text-decoration:none;
+  color: white;
+  cursor: pointer;
+}
+.wrapper{
+    height: 80%;
+    width: 80%;
+    background-color: #FFECD1; 
+    box-shadow: 0px 0px 10px #7e4d08; /* Add box shadow to .wrapper element */
+    overflow-y: scroll;
+}
+.wrapper::-webkit-scrollbar{
+  display: none;
+}
+/*  */
+.superhero {
+  display: flex;
+  align-items: center;
+}
+
+.superhero-image {
+  width: 100px;
+  height: 100px;
+}
+
+.superhero-name {
+  margin-left: 20px;
+}
+
+.remove-button {
+  margin-left: auto;
+}
+.image-card {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* card css */
+.character-card{
+  /* margin-right: 0%; */
+  --card-bg: rgba(24, 24, 24, 0.486);
+  --card-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--card-radius);
+  color: white;
+  cursor: pointer;
+  height: 321px;  
+  width: 250px;
+}
+.character-card .imageName {
+  display: flex;
+  padding: 1.7rem 0 0 0;
+  gap: 0.5rem;
+
+}
+#characterImageContainer {
+  /* margin: 5% auto 10%; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 80vh;
+  /* width: 90vw; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-gap: 5%;
+}
+/* Modal */
+:root {
+	--vs-primary: 29 92 255;
+}
+dialog::-webkit-scrollbar{
+  display: none;
+}
+dialog {
+  overflow-x:hidden;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	padding: 1rem 3rem;
+	background: rgb(255 255 255 / 40%);
+  height: 530px;
+  width: 400px;
+	padding-top: 2rem;
+	border-radius: 20px;
+	border: 0;
+	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+	animation: fadeIn 1s ease both;
+	&::backdrop {
+		animation: fadeIn 1s ease both;
+		background: rgba(212, 219, 212, 0.4);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
+	.x {
+		filter: grayscale(1);
+		border: none;
+		background: none;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		transition: ease filter, transform 0.3s;
+		cursor: pointer;
+		transform-origin: center;
+		&:hover {
+			filter: grayscale(0);
+			transform: scale(1.1);
+		}
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.3rem;
+		padding: 0.5rem 0;
+		a {
+			&:visited {
+				color: rgb(var(--vs-primary));
+			}
+		}
+	}
+}
+button.primary {
+	display: none;
+	font-size: 0.8rem;
+	color: #fff !important;
+	background: rgb(var(--vs-primary) / 100%);
+	padding: 13px 25px;
+	border-radius: 17px;
+	transition: background-color 0.1s ease;
+	box-sizing: border-box;
+	transition: all 0.25s ease;
+	border: 0;
+	cursor: pointer;
+	box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
+	&:hover {
+		box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+		transform: translateY(-5px);
+	}
+}
+/* modal inside css and animation */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.favHero{
+  margin: 5%;
+  margin-left: 4%;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  background-color: #089f6d;
+  cursor: pointer;
+}
+.removeHero{
+  
+  display: inline-block;
+  margin-left: 20%;
+  height: 40px;
+  width: 100px;
+  background-color:red;
+  cursor: pointer;
+}
+
+button{
+  border-radius: 10px;
+  font-style: italic;
+  font-size: medium;
+}
+#modalImage{
+  margin-top:-15px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 40px;
+}
+#modalName-span , #modalName,#modalComics,#modalStories,#modalSeries,#modalDescription {
+  color: #000000;
+  font-size: 22px;
+  margin-left: 5%;
+}
